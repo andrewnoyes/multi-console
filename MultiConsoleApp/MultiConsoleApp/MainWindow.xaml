@@ -1,0 +1,100 @@
+﻿<controls:MetroWindow x:Class="MultiConsoleApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:xcad="http://schemas.xceed.com/wpf/xaml/avalondock"
+        mc:Ignorable="d"
+        Title="Multi-Console" 
+        TitleCaps="False"
+        TitlebarHeight="30"
+        Height="350" 
+        Width="525"
+        WindowState="Maximized"
+        GlowBrush="{DynamicResource AccentColorBrush}"
+        NonActiveGlowBrush="{StaticResource AccentColorBrush2}"
+        WindowStartupLocation="CenterScreen">
+    
+    <controls:MetroWindow.Resources>
+        <ResourceDictionary>
+            <ImageBrush x:Key="ConsoleIco" ImageSource="Icons/console.ico"/>
+        </ResourceDictionary>
+    </controls:MetroWindow.Resources>
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <WrapPanel>
+            <Button Style="{StaticResource SquareButtonStyle}"
+                    BorderBrush="Transparent"
+                    Width="50"
+                    Height="50"
+                    Click="OpenConsole_OnClick"
+                    ToolTip="Open a Console Window">
+                <StackPanel Orientation="Vertical">
+                    <Image Source="Icons/console.ico"/>
+                    <TextBlock Text="Open Console"></TextBlock>
+                </StackPanel>
+            </Button>    
+        </WrapPanel>
+        
+        <!-- AVALON DOCKING MANAGER -->
+        <xcad:DockingManager Grid.Row="1"
+                             FontSize="14"
+                             AllowMixedOrientation="True"
+                             x:Name="DockingManager">
+
+            <xcad:DockingManager.Theme>
+                <xcad:MetroTheme/>
+            </xcad:DockingManager.Theme>
+
+            <xcad:LayoutRoot>
+
+                <xcad:LayoutPanel Orientation="Horizontal">
+                    <!-- MAIN CONTENT/TAB CONTROL -->
+                    <xcad:LayoutAnchorablePaneGroup DockWidth="3*"
+                                                    IsMaximized="False"
+                                                    x:Name="MainLayoutGroup">
+                       
+
+                        <!--<xcad:LayoutAnchorablePane >
+
+                            <xcad:LayoutAnchorable ContentId="TEST"
+                                                   Title="TEST"
+                                                   IconSource="Icons/console.ico">
+                            </xcad:LayoutAnchorable>
+                        </xcad:LayoutAnchorablePane>
+
+
+
+                        <xcad:LayoutAnchorablePane >
+
+                            <xcad:LayoutAnchorable ContentId="TEST"
+                                                   Title="TEST"
+                                                   IconSource="/Icons/console.ico">
+                            </xcad:LayoutAnchorable>
+                        </xcad:LayoutAnchorablePane>
+
+
+                        <xcad:LayoutAnchorablePane >
+
+                            <xcad:LayoutAnchorable ContentId="TEST"
+                                                   Title="TEST"
+                                                   IconSource="Icons/console.ico">
+                            </xcad:LayoutAnchorable>
+                        </xcad:LayoutAnchorablePane>-->
+                        
+                    </xcad:LayoutAnchorablePaneGroup>
+
+                </xcad:LayoutPanel>
+
+            </xcad:LayoutRoot>
+
+        </xcad:DockingManager>
+    </Grid>
+</controls:MetroWindow>
