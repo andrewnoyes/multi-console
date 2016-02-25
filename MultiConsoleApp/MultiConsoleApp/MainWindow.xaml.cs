@@ -32,7 +32,8 @@ namespace MultiConsoleApp
         {
             var pane = new LayoutAnchorablePane();
             //var consoleCtrl = new ConsoleControl.WPF.ConsoleControl { IsInputEnabled = true };
-            var consoleCtrl = new Huddled.Wpf.Controls.ConsoleControl();
+            //var consoleCtrl = new Huddled.Wpf.Controls.ConsoleControl();
+            var consoleCtrl = new ConsoleView();
             //var consoleCtrl = new PoshConsole()
             //consoleCtrl.StartProcess("cmd.exe", string.Empty);
             var anchor = new LayoutAnchorable
