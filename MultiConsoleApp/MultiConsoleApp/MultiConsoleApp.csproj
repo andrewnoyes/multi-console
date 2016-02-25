@@ -46,9 +46,25 @@
       <HintPath>..\packages\ConsoleControl.WPF.1.1.0.0\lib\net40\ConsoleControlAPI.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="FontLibrary">
+      <HintPath>..\..\..\..\..\Downloads\PoshConsole .Net4\PoshConsole\FontLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Huddled.Interop">
+      <HintPath>..\..\..\..\..\Downloads\PoshConsole .Net4\PoshConsole\Huddled.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Huddled.WPF.Controls">
+      <HintPath>..\..\..\..\..\Downloads\PoshConsole .Net4\PoshConsole\Huddled.WPF.Controls.dll</HintPath>
+    </Reference>
     <Reference Include="MahApps.Metro, Version=1.2.4.0, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL">
       <HintPath>..\packages\MahApps.Metro.1.2.4.0\lib\net45\MahApps.Metro.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Windows.Shell">
+      <HintPath>..\..\..\..\..\Downloads\PoshConsole .Net4\PoshConsole\Microsoft.Windows.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="PoshWpf">
+      <HintPath>..\..\..\..\..\Downloads\PoshConsole .Net4\PoshConsole\PoshWpf.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />

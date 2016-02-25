@@ -12,7 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using PoshWpf;
 using Xceed.Wpf.AvalonDock.Layout;
+using ConsoleControl = Huddled.Wpf.Controls.ConsoleControl;
 
 namespace MultiConsoleApp
 {
@@ -29,15 +31,16 @@ namespace MultiConsoleApp
         private void OpenConsole_OnClick(object sender, RoutedEventArgs e)
         {
             var pane = new LayoutAnchorablePane();
-            var consoleCtrl = new ConsoleControl.WPF.ConsoleControl { IsInputEnabled = true };
-            consoleCtrl.StartProcess("cmd.exe", string.Empty);
+            //var consoleCtrl = new ConsoleControl.WPF.ConsoleControl { IsInputEnabled = true };
+            var consoleCtrl = new Huddled.Wpf.Controls.ConsoleControl();
+            //var consoleCtrl = new PoshConsole()
+            //consoleCtrl.StartProcess("cmd.exe", string.Empty);
             var anchor = new LayoutAnchorable
             {
                 Content = consoleCtrl,
                 Title = "Console",
                 ContentId = "Console"
             };
-
             pane.Children.Add(anchor);
             MainLayoutGroup.Children.Add(pane);
         }
